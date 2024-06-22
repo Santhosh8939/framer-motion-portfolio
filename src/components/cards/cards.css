@@ -1,0 +1,108 @@
+.cardsMain {
+    margin: 1em 4em;
+    display: flex;
+    max-width: 1200px;
+    gap: 1.4rem;
+    
+    justify-items: center;
+}
+
+.card {
+    width: 20em;
+    height: 10em;
+    position: relative;
+    margin: 0em 1em;
+    border-radius: 18px;
+    box-shadow: #000 0px 14px 15px 0px;
+    padding: 6px;
+    overflow: hidden; /* Ensure the border animation stays within the card */
+}
+
+.card1 { 
+    background: url(/cards/netflix-clone.jpg) center;
+    background-size: cover;
+}
+.card2 { 
+    background: url(/cards/qr-generator.jpg) center;
+    background-size: cover;
+}
+.card3 { 
+    background: url(/cards/movie-rating.jpg) center;
+    background-size: cover;
+}
+.card4 { 
+    background: url(/cards/quiz.jpg) center;
+    background-size: cover;
+}
+
+.card .overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(12, 117, 135, 0.8);
+    opacity: 0;
+    transition: 0.4s;
+    border-radius: 18px;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+/* Keyframes for moving white border animation */
+@keyframes movingBorder {
+    0% {
+        box-shadow: 0 0 0 0 white;
+    }
+    25% {
+        box-shadow: 0 -2px 0 0 white;
+    }
+    50% {
+        box-shadow: -2px 0 0 0 white;
+    }
+    75% {
+        box-shadow: 0 2px 0 0 white;
+    }
+    100% {
+        box-shadow: 2px 0 0 0 white;
+    }
+}
+
+
+@keyframes pulsate {
+    
+    100% {
+        background: rgba(12, 117, 135, 0.8);
+    }
+}
+
+.card:hover {
+    animation: movingBorder 0.8s infinite;
+}
+
+.card .overlay {
+    animation: pulsate 1.1s infinite;
+}
+
+@media only screen and (max-width: 600px) {
+    .card{width: 18em; height: 8em;} 
+    .cardsMain {
+        margin: 10px 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 912px) {
+    .cardsMain {
+        margin: 10px 15px;
+    }
+}

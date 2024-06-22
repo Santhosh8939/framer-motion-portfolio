@@ -1,0 +1,61 @@
+.logos{
+    overflow: hidden;
+    padding: 40px 0px;
+    background-color: transparent;
+    white-space: nowrap;
+    position: relative;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 2%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 98%);
+   
+}
+
+.logos::before, .logos::after{
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+.logos::before{
+    left: 0;
+    /* background: linear-gradient(to left, rgba(255, 255, 255, 0), #0c0c1d);  */
+  
+}
+.logos::after{
+    right: 0;
+   /* background:linear-gradient(to right, rgba(255, 255, 255, 0), #0a0a26) */
+}
+
+.logo-slide{
+    display: inline-block;
+    animation: 35s slide infinite linear;
+}
+
+.logo-slide img{
+    height: 80px;
+    margin: 0 40px;
+}
+/* .logos:hover .logo-slide{
+    animation-play-state: paused;
+} */
+
+.logo-slide img:hover {
+    transform: scale(1.1, 1.1);
+  }
+  
+
+ /* .logos:hover > .logo-slide img:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+  }  */
+
+ @keyframes slide{
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-100%);
+    }
+} 
+

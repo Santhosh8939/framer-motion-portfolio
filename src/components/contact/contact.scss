@@ -1,0 +1,96 @@
+@import "../../app.scss";
+
+.contact{
+    height: calc(100vh - 100px);
+    overflow: hidden;
+    background: linear-gradient(180deg, #0c0c1d, #28173a);
+    position: relative;
+
+    @include mobile{
+        height: 100%;
+        background: linear-gradient(180deg, #0c0c1d, #0c0c1d);
+    }
+
+    .mainContainer{
+
+        display: flex;
+        justify-content: center;
+
+        @include mobile{
+            flex-direction: column !important;
+            align-items: center;
+        }
+        @include tablet{
+            flex-direction: column-reverse;
+        }
+
+        .textContainter{
+            margin: 1em 4em;
+            
+            @include mobile{
+                margin: 10px 25px;
+            }
+
+            h1{
+                font-size: 60px; color: white; word-spacing: 0.3cm;
+                text-decoration-line: underline;
+                text-underline-offset: 7px;
+                text-decoration-color:rebeccapurple;
+                @include mobile{
+                    font-size: 36px;
+                }
+            }
+           
+
+            p{
+                margin: 18px 0px;
+                font-size: 24px;
+                small{
+                    font-size: 20px;
+                    @include mobile{
+                        font-size: 16px;
+                    }
+                }
+                @include mobile{
+                    font-size: 18px;
+                    margin: 12px 0px;
+                }
+                
+                br{
+                    @include mobile{
+                        display: none;
+                    }
+                }
+
+                span{color: rebeccapurple;}
+             }
+
+             .icon{
+                margin-top: 45px;
+             }
+        }
+
+        .imageContainer{
+            margin: 1em 4em 1em 4em;
+            @include mobile{
+                margin: 10px;
+            }
+
+            @include tablet{
+                margin: 20px 10px 35px 10px; display: flex;
+                justify-content: center;}
+
+            img{
+                width: 30vw;
+
+                @include mobile{
+                    width: 52vw;
+                }
+                @include tablet{
+                    width: 50vw;
+                }
+
+            }
+        }
+    }
+}

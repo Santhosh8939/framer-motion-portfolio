@@ -1,0 +1,42 @@
+@import "../../app.scss";
+
+.nav {
+
+    
+    .sidebar {
+        display: none;
+    }
+
+    height: 100px;
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: end;
+    background: transparent;
+    color: white;
+    align-items: center;
+
+
+    .nav-menu{
+        font-size: 22px;
+        font-weight: 600;
+        display: flex;
+        gap: 28px;
+
+        @include tablet { font-size: 26px; }
+    }
+}
+
+@media (max-width: 768px) {
+    .nav .sidebar{
+        display: block;
+    }
+    .nav {
+       .logo, .nav-menu{
+            display: none;
+        }
+    }
+}

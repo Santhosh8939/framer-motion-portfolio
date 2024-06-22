@@ -1,0 +1,8 @@
+@media only screen and (min-device-width : 667px)  and (max-device-width : 375px) 
+and (orientation : landscape) {
+
+    .hero .wrapper{height: 97% !important;}
+    #imageContainer img {
+        left: 32% !important;
+    }
+  }

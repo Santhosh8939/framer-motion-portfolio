@@ -1,0 +1,46 @@
+@import "../../app.scss";
+
+.portfolio{
+   height: calc(100vh - 100px);
+   overflow: hidden;
+   background: linear-gradient(180deg, #0c0c1d, #28173a);
+   position: relative;
+   
+   @include mobile{
+       height: 100%;
+       background: linear-gradient(180deg, #0c0c1d, #0c0c1d);
+   }
+
+
+   .textContainter{
+    margin: 1em 4em;
+    
+    @include mobile{
+        margin: 10px 25px;
+    }
+
+    h2{
+        font-size: 30px; color: rebeccapurple; letter-spacing: 0.6cm;
+    @include mobile{letter-spacing: 0.4cm;}
+    }
+    h2:after{
+        content: "";
+        width: 150px;
+        height: 2px;
+        display: inline-block;
+        background: white;
+        margin: 8px 10px;
+        @include mobile{
+            display: none;
+        }
+
+    }
+
+    h1{
+        font-size: 60px; color: white; word-spacing: 0.3cm;
+        @include mobile{
+            font-size: 36px;
+        }
+    }
+    }
+}
